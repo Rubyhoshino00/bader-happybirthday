@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b20"><meta name="color-scheme" content="dark">
+  <meta name="description" content="Moonlit Chapter 25 — an interactive birthday visual novel for Bader, made by Mira.">
+  <title>Moonlit Chapter 25 — For Bader</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div><div class="shooting-star" aria-hidden="true"></div>
+  <header class="topbar"><a href="#" id="homeLink" class="brand"><span class="moon">☾</span><span>MOONLIT<br><b>CHAPTER 25</b></span></a><div class="top-actions"><span class="date">18 NOVEMBER · BADER'S 24TH</span><button id="soundBtn" class="small-btn" aria-label="Toggle background music">♫ <span id="soundLabel">Music off</span></button></div></header>
+  <main>
+    <section id="titleScreen" class="title-screen screen">
+      <div class="title-copy"><p class="eyebrow">✦ A LITTLE STORY UNDER THE SAME SKY ✦</p><h1>Moonlit<br><em>Chapter 25</em></h1><p class="subtitle">Some nights are written in stars.<br>This one was written for you.</p><p class="dedication">A birthday visual novel for Bader<br><span>made with love, by Mira ♡</span></p><button id="startBtn" class="primary">Enter the story <span>↗</span></button><p class="hint">Music · browser voice narration · choices · save/load · headphones optional</p></div>
+      <div class="title-art"><img src="assets/moonlit-city.jpg" alt="A quiet anime city beneath the night sky"><div class="art-glow"></div><div class="moon-orb"></div><div class="art-caption">THE NIGHT IS QUIET.<br><i>YOUR NEXT CHAPTER ISN'T.</i></div><div class="art-stamp">18<br><small>NOV</small></div></div>
+    </section>
+
+    <section id="gameScreen" class="game-screen screen hidden" aria-live="polite">
+      <div class="game-head"><span id="chapterTag">PROLOGUE</span><span class="head-star">✧</span><span id="chapterTitle">THE MESSAGE AFTER MIDNIGHT</span><div class="head-tools"><button id="logBtn" class="tool-btn">Log</button><button id="saveBtn" class="tool-btn">Save</button><button id="loadBtn" class="tool-btn">Load</button><button id="voiceBtn" class="tool-btn">◖ Voice off</button><button id="autoBtn" class="tool-btn">Auto: off</button><button id="restartBtn" class="tool-btn">Restart ↻</button></div></div>
+      <div class="scene" id="scene"><div class="scene-overlay"></div><div class="scene-moon"></div><div class="scene-stars">✦　·　✧　·　⋆</div><div class="character-wrap" id="characterWrap"><img id="baderSprite" src="assets/bader-room.jpg" alt="Bader, anime character"><div id="emotionTag" class="emotion-tag">✦ Bader</div></div><div id="sceneCaption" class="scene-caption">A quiet night, a message waiting to be found.</div></div>
+      <div class="dialogue-box"><div class="speaker-tab"><span id="speakerIcon">☾</span><span id="speakerName">Mira · Narrator</span></div><p id="dialogueText" class="dialogue-text"></p><div id="choices" class="choices"></div><div class="dialogue-controls"><span><span id="lineCount">01 / 14</span> <span id="saveFeedback" role="status"></span></span><div class="control-buttons"><button id="backBtn" class="tool-btn" disabled>← Back</button><button id="nextBtn" class="next-btn">Continue <span>→</span></button></div></div></div>
+      <div class="progress"><div id="progressFill"></div></div>
+    </section>
+
+    <section id="endingScreen" class="ending-screen screen hidden"><div class="ending-art"><img src="assets/birthday-cake.jpg" alt="A birthday cake beneath warm lights"><div class="ending-moon">☾</div></div><div class="ending-copy"><p class="eyebrow">✦ THE LAST PAGE, FOR NOW ✦</p><h2 id="endingTitle">Happy 24th Birthday,<br><em>Bader.</em></h2><p id="endingIntro" class="ending-intro"></p><div class="letter-card"><div class="letter-label">A LITTLE NOTE FROM MIRA ♡</div><p id="endingLetter"></p><p class="signature">— Mira <span>✦</span></p></div><p class="ending-tagline">24 years behind you. A whole sky ahead.</p><div class="ending-actions"><button id="replayBtn" class="primary">Read it again ↻</button><button id="copyBtn" class="secondary">Copy birthday wish</button></div><p id="copyFeedback" class="hint" role="status"></p></div></section>
+    <section id="logPanel" class="log-panel hidden"><div class="log-head"><b>STORY LOG</b><button id="closeLog" class="tool-btn">Close ×</button></div><div id="logEntries"></div></section>
+  </main>
+  <footer><span>FOR BADER · 18 NOVEMBER</span><span>BUILT FROM STARDUST & FRIENDSHIP <b>♡</b></span></footer>
+  <script src="script.js"></script>
+</body></html>
